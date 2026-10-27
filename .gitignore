@@ -1,0 +1,14 @@
+# Dipendenze Node.js
+node_modules/
+
+# File di output della compilazione TypeScript (se configurato)
+dist/
+
+# File di log di npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Eventuali file di configurazione dell'ambiente o del sistema operativo
+.DS_Store
+.env
