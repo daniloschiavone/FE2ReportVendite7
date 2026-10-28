@@ -83,7 +83,7 @@ export function calculateTop3Products(
       revenue: Math.round(totals.revenue * 100) / 100
     };
   })
-    .sort((a, b) => b.revenue - a.revenue || a.productId - b.productId)
+    .sort((a, b) => b.unitsSold - a.unitsSold || b.revenue - a.revenue)
     .slice(0, 3)
     .map((product, index) => ({ ...product, position: index + 1 }));
 }

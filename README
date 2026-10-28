@@ -2,9 +2,21 @@
 
 Questo progetto genera due report analitici (Top 3 Prodotti venduti e Top 3 Clienti per volume di spesa) basati sui dati pubblici di [Fake Store API](https://fakestoreapi.com/)[cite: 1]. Il progetto è sviluppato in TypeScript ed eseguito localmente tramite Node.js.
 
+## Scelte implementative e gestione dei dati
+
+- **Definizione di «ultimo mese»:** Il periodo dell'ultimo mese è calcolato individuando la data dell'ordine (carrello) più recente presente nel dataset (usata come data di ancoraggio) e sottraendo 30 giorni esatti. Tutti i carrelli compresi tra la data di inizio (inclusa) e la data di ancoraggio (inclusa) rientrano nel calcolo.
+- **Gestione dati orfani (prodotti o utenti assenti):** Se un carrello fa riferimento a un `userId` non presente nell'anagrafica utenti, l'intero carrello viene ignorato nel report clienti. Se un elemento del carrello contiene un `productId` assente dal catalogo prodotti, quella singola riga d'ordine viene ignorata nel calcolo delle unità vendute e della spesa totale, evitando crash dell'applicazione.
+
 ## Come installare le dipendenze
 
 Assicurati di avere Node.js installato sul tuo sistema. Apri il terminale nella cartella del progetto ed esegui:
 
 
 npm install
+
+## Come eseguire il progetto
+
+Per scaricare i dati, elaborare le classifiche e stampare i due report JSON, esegui il comando:
+
+
+npm start
