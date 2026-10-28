@@ -1,0 +1,10 @@
+# Report Vendite e Clienti - Fake Store API
+
+Questo progetto genera due report analitici (Top 3 Prodotti venduti e Top 3 Clienti per volume di spesa) basati sui dati pubblici di [Fake Store API](https://fakestoreapi.com/)[cite: 1]. Il progetto è sviluppato in TypeScript ed eseguito localmente tramite Node.js.
+
+## Come installare le dipendenze
+
+Assicurati di avere Node.js installato sul tuo sistema. Apri il terminale nella cartella del progetto ed esegui:
+
+
+npm install
