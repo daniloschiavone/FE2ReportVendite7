@@ -5,7 +5,7 @@ export type Product = {
   title: string;
   price: number;
   category: string;
-} 
+};
 
 
 // TODO 2: Definisci l'interfaccia per il singolo elemento dentro un carrello e l'interfaccia per il Carrello restituito da GET /carts.
@@ -83,4 +83,4 @@ export type CustomerReport = {
   metadata: ReportMetadata;
   allTimeRanking: CustomerRanking[];
   lastMonthRanking: CustomerRanking[];
-}   
+};
